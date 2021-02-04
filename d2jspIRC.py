@@ -26,7 +26,7 @@ class JspIRC(object):
         if len(args) == 1:
             if args[0].startswith(':chat.d2jsp.org 652'):  # fg received message
                 line = args[0][1:].split(':', 1)
-                fg_message = line[1].replace('\n', ' ').trim()
+                fg_message = line[1].replace('\n', ' ').strip()
                 info = line[0][:-1].rsplit(' ', 3)
                 user = info[1]
                 user_id = info[2]
